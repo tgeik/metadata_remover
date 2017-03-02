@@ -1,6 +1,23 @@
-% enter the full address to the folder where jpg files are stored
-% e.g. 'c:\users\'
-folder = ''; 
+function metadata_remover(folder)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NAME :            metadata_remover
+%
+% DESCRIPTION :     batch removal of metadata from all jpg files in
+%                   a folder
+%
+% INPUT :
+%        folder     string containing the full path of the folder
+%                   where the jpg files are stored
+%
+% OUTPUT :
+%        none
+%
+% PROCESS :
+%        [1]  Scan the folder, create a list of files
+%        [2]  Read the image data from the jpg file
+%        [3]  Write the image data in the same file with no metadata
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 cd(folder);
 list = dir;
